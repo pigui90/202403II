@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>17</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>102</x>
+      <y>0</y>
+      <w>425</w>
+      <h>425</h>
+    </coordinates>
+    <panel_attributes>
+Supermercado
+--
+- nombre : String
+- cedulaJuridica : int
+- ubicacion : String
+--
++ Supermercado() : Supermercado
++ getnombre() : String
++ setNombre(String) : void
++ getCedulaJuridica() : int
++ setCedulaJuridica(int) : void
++ getUbicacion() : String
++ setUbicacion(String) : void
++ mostrarInfoClientes() : String
++ mostrarCliente(Cliente) : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>731</x>
+      <y>0</y>
+      <w>357</w>
+      <h>408</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+- identificacion : int
+- nombre : String
+- fechaNacimiento: Date
+- codigoCliente : String
+- puntosAcumulados : int
+- supermercado : Supermercado
+--
++ Cliente() : Cliente
++ get()
++ set()
++ consultarPuntos() : int
++ consultarInformacion() : String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>119</x>
+      <y>561</y>
+      <w>442</w>
+      <h>391</h>
+    </coordinates>
+    <panel_attributes>Producto
+--
+- codigo : String
+- precioUnitario : int
+- indicadorDescuento : boolean
+- porcentajeDescuento : int
+- cantidadStock : int
+- supermercado : Supermercado
+
+--
++ Producto() : Producto
++ gets()
++ sets()
++ verificarDisponibilidadStock() : int
++ notificarFaltanteStock() : String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>748</x>
+      <y>544</y>
+      <w>357</w>
+      <h>323</h>
+    </coordinates>
+    <panel_attributes>Carrito
+--
+- codigoUnico : String
+- fecha : Date
+- cliente : Cliente
+- totalPagar : double
+--
++ Carrito() : Carrito
++ gets()
++ sets()
++ generarFactura() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>1003</y>
+      <w>476</w>
+      <h>374</h>
+    </coordinates>
+    <panel_attributes>DetalleCarrito
+--
+- carrito : Carrito
+- producto : Producto
+- cantidadComprar : int
+- precioSinDescuento : double
+- totalProducto : double
+
+--
++ DetalleCarrito() : Carrito
++ gets()
++ sets()
++ rebajarStockProducto(Producto, int) : boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>119</y>
+      <w>255</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>408</y>
+      <w>85</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>867</x>
+      <y>391</y>
+      <w>85</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>799</x>
+      <y>850</y>
+      <w>85</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>425</x>
+      <y>935</y>
+      <w>221</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1...*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;40.0</additional_attributes>
+  </element>
+</diagram>

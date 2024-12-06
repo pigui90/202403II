@@ -19,6 +19,7 @@ import java.awt.event.MouseEvent;
 import java.awt.Font;
 
 public class Principal extends JFrame {
+	
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
